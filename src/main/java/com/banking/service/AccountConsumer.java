@@ -35,6 +35,7 @@ public class AccountConsumer {
             }
             account.setAccountNumber(Integer.parseInt(padded));
             account.setId(seqGeneratorService.generateSequence(Account.SEQUENCE_NAME));
+            account.setValidationStatus(true);
 
             accountDAO.save(account);
 
